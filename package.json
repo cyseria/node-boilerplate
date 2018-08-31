@@ -1,6 +1,6 @@
 {
     "name": "node-demo",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "node 项目最佳实践",
     "icafe": "node-best-practices",
     "private": true,
@@ -18,8 +18,7 @@
         "egg-bin": "^4.3.5",
         "egg-ci": "^1.8.0",
         "egg-mock": "^3.14.0",
-        "eslint": "^4.11.0",
-        "eslint-config-egg": "^6.0.0",
+        "fecs": "^1.6.1",
         "webstorm-disable-index": "^1.2.0"
     },
     "engines": {
@@ -33,12 +32,12 @@
         "test": "npm run lint -- --fix && npm run test-local",
         "test-local": "egg-bin test",
         "cov": "egg-bin cov",
-        "lint": "eslint .",
+        "lint": "fecs check --level 2",
         "ci": "npm run lint && npm run cov",
         "autod": "autod",
         "commit": "git cz",
         "changelog": "conventional-changelog -p @baidu/befe -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-        "version ": "npm run changelog"
+        "version": "npm run test && npm run changelog"
     },
     "ci": {
         "version": "8"
