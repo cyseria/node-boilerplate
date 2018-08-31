@@ -1,4 +1,4 @@
-# icode 代码提交
+# agile 流水线编译
 
 export PATH=$NODEJS_BIN_LATEST:$PATH
 

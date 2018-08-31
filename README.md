@@ -44,12 +44,9 @@ $ open http://localhost:7001/
     - create CHANGELOG
 
 
-### 部署
+### 部署到 dev
 
-```bash
-$ npm start
-$ npm stop
-```
+使用微云 docker 部署，相关操作已在流水线中集成。
 
 ### 单元测试
 
