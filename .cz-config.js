@@ -17,7 +17,7 @@ module.exports = {
         },
         {
             value: 'refactor',
-            name: '🛠  refactor: A code change that neither fixes a bug nor adds a feature'
+            name: '🛠   refactor: A code change that neither fixes a bug nor adds a feature'
         },
         {
             value: 'docs',
@@ -28,9 +28,17 @@ module.exports = {
             name: '🏁  test:     Add missing tests or correcting existing tests'
         },
         {
+            value: 'ci',
+            name: '🚥  ci:      Changes to our CI configuration files and scripts'
+        },
+        {
             value: 'chore',
             name:
                 '🗯  chore:    Changes that don\'t modify src or test files. Such as updating build tasks, package manager'
+        },
+        {
+            value: 'perf',
+            name: '🚀  perf:      A code change that improves performance'
         },
         {
             value: 'style',
@@ -43,7 +51,7 @@ module.exports = {
         }
     ],
 
-    scopes: [],
+    scopes: ['demo'],
     allowCustomScopes: true,
     allowBreakingChanges: ['feat', 'fix']
 };

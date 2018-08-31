@@ -1,16 +1,19 @@
 {
     "name": "node-demo",
-    "version": "1.0.0",
-    "description": "",
+    "version": "0.0.1",
+    "description": "node 项目最佳实践",
+    "icafe": "node-best-practices",
     "private": true,
     "dependencies": {
         "egg": "^2.2.1",
         "egg-scripts": "^2.5.0"
     },
     "devDependencies": {
+        "@baidu/conventional-changelog-befe": "^1.2.1",
         "autod": "^3.0.1",
         "autod-egg": "^1.0.0",
         "commitizen": "^2.10.1",
+        "conventional-changelog-cli": "^2.0.5",
         "cz-customizable": "^5.2.0",
         "egg-bin": "^4.3.5",
         "egg-ci": "^1.8.0",
@@ -33,7 +36,9 @@
         "lint": "eslint .",
         "ci": "npm run lint && npm run cov",
         "autod": "autod",
-        "commit": "git cz"
+        "commit": "git cz",
+        "changelog": "conventional-changelog -p @baidu/befe -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+        "version ": "npm run changelog"
     },
     "ci": {
         "version": "8"

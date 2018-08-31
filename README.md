@@ -21,6 +21,9 @@ $ npm run dev
 $ open http://localhost:7001/
 ```
 
+✨ 如何规范化的提交代码
+
+
 ### 部署
 
 ```bash
