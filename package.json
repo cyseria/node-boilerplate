@@ -1,6 +1,6 @@
 {
     "name": "node-demo",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "node 项目最佳实践",
     "icafe": "node-best-practices",
     "private": true,
