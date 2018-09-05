@@ -1,6 +1,12 @@
 {
+    "files": ["app", "config", "test"],
     "eslint": {
+        "env": {
+            "node": true,
+            "browser": false
+        },
         "rules": {
+            "no-console": 0,
             "fecs-valid-jsdoc": "off",
             "fecs-export-on-declare": "off",
             "fecs-min-vars-per-destructure": "off",

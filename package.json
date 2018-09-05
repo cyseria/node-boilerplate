@@ -1,24 +1,34 @@
 {
     "name": "node-demo",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "node 项目最佳实践",
     "icafe": "node-best-practices",
     "private": true,
     "dependencies": {
-        "egg": "^2.2.1",
-        "egg-scripts": "^2.5.0"
+        "egg": "^2.10.0",
+        "egg-graphql": "^2.1.0",
+        "egg-scripts": "^2.9.1",
+        "egg-sequelize": "^4.1.0",
+        "egg-validate": "^2.0.1",
+        "mysql2": "^1.6.1"
     },
     "devDependencies": {
         "@baidu/conventional-changelog-befe": "^1.2.1",
         "autod": "^3.0.1",
-        "autod-egg": "^1.0.0",
+        "autod-egg": "^1.1.0",
         "commitizen": "^2.10.1",
         "conventional-changelog-cli": "^2.0.5",
         "cz-customizable": "^5.2.0",
-        "egg-bin": "^4.3.5",
+        "egg-bin": "^4.8.3",
         "egg-ci": "^1.8.0",
-        "egg-mock": "^3.14.0",
+        "egg-mock": "^3.20.0",
+        "eslint": "^5.5.0",
+        "eslint-config-egg": "^7.1.0",
+        "factory-girl": "^5.0.2",
         "fecs": "^1.6.1",
+        "husky": "^1.0.0-rc.13",
+        "prettier": "^1.14.2",
+        "sequelize-cli": "^4.1.1",
         "webstorm-disable-index": "^1.2.0"
     },
     "engines": {
@@ -26,17 +36,18 @@
     },
     "scripts": {
         "start": "node ./node_modules/egg-scripts/bin/egg-scripts.js start --port=8080 --title=egg-server-node-demo",
-        "dev": "egg-bin dev",
-        "debug": "egg-bin debug",
-        "test": "npm run lint -- --fix && npm run test-local",
+        "dev": "egg-bin dev --port=8080",
+        "debug": "egg-bin debug --port=8080",
+        "test": "npm run lint && npm run test-local",
         "test-local": "egg-bin test",
         "cov": "egg-bin cov",
-        "lint": "fecs check --level 2",
+        "lint": "fecs format --replace true && fecs check --level 2",
         "ci": "npm run lint && npm run cov",
         "autod": "autod",
         "commit": "git cz",
         "changelog": "conventional-changelog -p @baidu/befe -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-        "version": "npm run test && npm run changelog"
+        "version": "npm run test && npm run changelog",
+        "sequelize": "sequelize --"
     },
     "ci": {
         "version": "8"
@@ -50,6 +61,12 @@
     "config": {
         "commitizen": {
             "path": "./node_modules/cz-customizable"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint",
+            "pre-push": "npm test"
         }
     }
 }
