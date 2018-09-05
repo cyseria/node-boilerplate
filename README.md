@@ -1,4 +1,9 @@
 # Node Demo
+
+[CHANGELOG](./CHANGELOG.md)
+
+## 🛠 开发流程
+
 ### 本地开发
 
 项目基于 node v8.11.3 开发，如果跑起来有问题，可以尝试下切换版本 :)
@@ -70,7 +75,7 @@ dev 环境地址：https://hirobot.dev.weiyun.baidu.com:8425/demo
 
 ### 上线
 
-## 项目相关
+## 📝 项目相关
 
 ### 指令
 
@@ -111,24 +116,27 @@ xxxxx
 
 2. 强烈建议使用主流的 [约定式 `comment message`](https://conventionalcommits.org/lang/zh-Hans) 格式
 
-```
-<type>(<scope>): <subject>
+    ```
+    <type>(<scope>): <subject>
 
-<body>
+    <body>
 
-<footer>
-```
+    <footer>
+    ```
 
 3. 使用 `npm run commit` 命令提交，或者全局安装 [commitizen](https://github.com/commitizen/cz-cli)。而不是直接使用 `git commit -m "xxx"`
     - 会被 `changelog` 记录的 type 有: `feat(新功能)`, `fix(修复 bug)`, `perf(性能优化)`, `revert(代码回滚)`
 
-    ![](https://eux-public.bj.bcebos.com/2018/08/31/18ba8de6d5f699a4980441b3c.png)
+4. 提交代码的时候在 `commit message` 中带上 `iCafe` 卡片信息。(ps. changelog 已配置与代码库关联，可直接输入卡片 id)
 
-4. 提交代码的时候在 `commit message` 中带上 `iCafe` 卡片信息。(ps. 已经与代码库关联，可直接输入卡片 id)
+    ```
+    ? LIST any ISSUES CLOSED by this change (optional). E.g.: #31, #34
+    #16, #17
+    or
+    node-best-practices-16, node-best-practices-17
+    ```
 
-    ![](https://eux-public.bj.bcebos.com/2018/08/31/17255c71f611d1359a8b4f74c.png)
-    
-    ![](https://eux-public.bj.bcebos.com/2018/08/31/17f024589d4da55697196207b.png)
+    ⚠️ 如果直接使用 `#16, #17` 的写法, iCode 上暂时还没法关联, 所以建议写全称呼 (todo: commit msg 还原)
 
 5. 上线的时候对版本进行更新。使用 `npm version patch` or `npm version xxx`，而不只是直接提交完代码就去发单。更新版本会自动执行以下内容:
     - fecs check --level 2
