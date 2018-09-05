@@ -5,5 +5,20 @@
 
 'use strict';
 
-// had enabled by egg
-// exports.static = true;
+// plugins: egg-validate
+exports.validate = {
+    enable: true,
+    package: 'egg-validate'
+};
+
+// plugins: egg-graphql
+// exports.graphql = {
+//     enable: true,
+//     package: 'egg-graphql'
+// };
+
+// plugins: egg-sequelize
+exports.sequelize = {
+    enable: true,
+    package: 'egg-sequelize'
+};
