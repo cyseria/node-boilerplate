@@ -1,6 +1,6 @@
 # Node Demo
 
-[CHANGELOG](./CHANGELOG.md)
+[CHANGELOG](http://icode.baidu.com/repos/baidu/hi-fe/node-demo/blob/master:CHANGELOG.md)
 
 ## 🛠 开发流程
 

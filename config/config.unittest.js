@@ -17,7 +17,6 @@ module.exports = appInfo => {
         username: 'root',
         password: 'root@mAnyu'
     };
-
     /* ----- plugins: egg-sequelize end -----  */
 
     return config;
