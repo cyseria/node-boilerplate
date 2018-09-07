@@ -53,7 +53,7 @@ module.exports = {
         }
     ],
 
-    scopes: ['demo'],
+    scopes: ['project', 'rules', 'ci'],
     allowCustomScopes: true,
     allowBreakingChanges: ['feat', 'fix']
 };
