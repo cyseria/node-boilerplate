@@ -34,7 +34,6 @@ npm i
 ```bash
 # for develop
 npm run sequelize -- db:migrate
-
 ```
 
 **启动项目**

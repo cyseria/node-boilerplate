@@ -27,6 +27,7 @@
         "factory-girl": "^5.0.2",
         "fecs": "^1.6.1",
         "husky": "^1.0.0-rc.13",
+        "lint-staged": "^7.2.2",
         "prettier": "^1.14.2",
         "sequelize-cli": "^4.1.1",
         "webstorm-disable-index": "^1.2.0"
@@ -65,8 +66,12 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run lint",
-            "pre-push": "npm test"
+            "pre-commit": "lint-staged",
+            "pre-push": "npm test",
+            "commit-msg": ""
         }
+    },
+    "lint-staged": {
+        "*.{js,scss,css,html}": "fecs check --level 2"
     }
 }
