@@ -1,12 +1,18 @@
+/**
+ * @file TESTS=test/app/controller/user.test.js npm run test-local
+ * @author 陈蔓青 <chenmanqing@baidu.com>
+ */
+
 'use strict';
 
 const {assert, app} = require('egg-mock/bootstrap');
 
+const usersApi = '/api/users';
 describe('test/app/service/user.test.js', () => {
     describe('GET /users', () => {
         it('should work', async () => {
             await app.factory.createMany('user', 3);
-            const res = await app.httpRequest().get('/users?limit=2');
+            const res = await app.httpRequest().get(`${usersApi}?limit=2`);
             assert(res.status === 200);
             assert(res.body.count === 3);
             assert(res.body.rows.length === 2);
@@ -19,7 +25,7 @@ describe('test/app/service/user.test.js', () => {
         it('should work', async () => {
             const user = await app.factory.create('user');
             // eslint-disable-next-line
-            const res = await app.httpRequest().get(`/users/${user.id}`);
+            const res = await app.httpRequest().get(`${usersApi}/${user.id}`);
             assert(res.status === 200);
             assert(res.body.age === user.age);
         });
@@ -30,7 +36,7 @@ describe('test/app/service/user.test.js', () => {
             app.mockCsrf();
             let res = await app
                 .httpRequest()
-                .post('/users')
+                .post(usersApi)
                 .send({
                     age: 10,
                     name: 'name'
@@ -38,7 +44,7 @@ describe('test/app/service/user.test.js', () => {
             assert(res.status === 201);
             assert(res.body.id);
 
-            res = await app.httpRequest().get(`/users/${res.body.id}`);
+            res = await app.httpRequest().get(`${usersApi}/${res.body.id}`);
             assert(res.status === 200);
             assert(res.body.name === 'name');
         });
@@ -50,7 +56,7 @@ describe('test/app/service/user.test.js', () => {
 
             app.mockCsrf();
             // eslint-disable-next-line
-            const res = await app.httpRequest().delete(`/users/${user.id}`);
+            const res = await app.httpRequest().delete(`${usersApi}/${user.id}`);
             assert(res.status === 200);
         });
     });
