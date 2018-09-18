@@ -41,7 +41,7 @@ npm run sequelize -- db:migrate
 ```bash
 npm run dev
 ```
-open http://localhost:7001/
+open http://localhost:8080/
 
 
 ### 测试
@@ -105,7 +105,7 @@ xxxxx
 - [] 数据库
     - [] simple: [egg-mysql](https://github.com/eggjs/egg-mysql), 如需使用可参照官方文档 https://eggjs.org/zh-cn/tutorials/mysql.html 配置，或者参考 `baidu/hi/node-robot-server` 项目。
     - [x] use ORM: [egg-sequelize](https://github.com/eggjs/egg-sequelize), [mysql2](https://github.com/sidorares/node-mysql2)。使用 [sequelize-cli](https://github.com/sequelize/cli) 来管理数据库的接口变更 & 数据迭代。
-- [] api 接口: [egg-graphql](https://github.com/eggjs/egg-graphql), restful
+- [x] api 接口: [egg-graphql](https://github.com/eggjs/egg-graphql), restful
 - [] 消息队列: kafka
 
 

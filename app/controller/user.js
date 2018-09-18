@@ -3,6 +3,7 @@
 const Controller = require('egg').Controller;
 
 class UserController extends Controller {
+    // GET /users
     async index() {
         const ctx = this.ctx;
         const query = {
@@ -12,11 +13,13 @@ class UserController extends Controller {
         ctx.body = await ctx.service.user.list(query);
     }
 
+    // GET /users/:id
     async show() {
         const ctx = this.ctx;
         ctx.body = await ctx.service.user.find(ctx.helper.parseInt(ctx.params.id));
     }
 
+    // POST /users
     async create() {
         const ctx = this.ctx;
         const user = await ctx.service.user.create(ctx.request.body);
@@ -24,6 +27,7 @@ class UserController extends Controller {
         ctx.body = user;
     }
 
+    // PUT /users/:id
     async update() {
         const ctx = this.ctx;
         const id = ctx.helper.parseInt(ctx.params.id);
@@ -31,6 +35,7 @@ class UserController extends Controller {
         ctx.body = await ctx.service.user.update({id, updates: body});
     }
 
+    // DELETE /users/:id
     async destroy() {
         const ctx = this.ctx;
         const id = ctx.helper.parseInt(ctx.params.id);

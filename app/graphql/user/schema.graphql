@@ -1,0 +1,7 @@
+type User {
+  id: ID!
+  name: String!,
+  age: Int,
+  updated_at: Date
+  created_at: Date
+}

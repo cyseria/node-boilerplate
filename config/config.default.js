@@ -12,7 +12,7 @@ module.exports = appInfo => {
     config.keys = appInfo.name + '_1535617963473_3838';
 
     // plugins: egg-graphql
-    // config.middleware = ['graphql'];
+    config.middleware = ['graphql'];
 
     // Egg 内置的 [egg-security](https://github.com/eggjs/egg-security/) 插件默认对所有『非安全』的方法，例如 POST，PUT，DELETE 都进行 CSRF 校验。
     // 这里测试方便设置允许跨域访问，实际建议通过 ip 白名单的方式来做过滤。ignore: ctx => isInnerIp(ctx.ip), 或参考官方使用

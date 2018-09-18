@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @author 陈蔓青 <chenmanqing@baidu.com>
+ * models usage: http://docs.sequelizejs.com/manual/tutorial/models-usage.html
+ */
+
 'use strict';
 
 const Service = require('egg').Service;
