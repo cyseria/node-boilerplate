@@ -14,7 +14,9 @@ class UserConnector {
     }
 
     async getInfoByService(id) {
-        return await this.ctx.service.user.find(id);
+        // eslint-disable-next-line
+        const user = await this.ctx.service.user.find(id);
+        return user;
     }
 }
 
