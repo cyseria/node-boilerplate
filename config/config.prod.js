@@ -6,7 +6,6 @@
 module.exports = appInfo => {
     const config = (exports = {});
 
-    // 如果要在微云上面获取日志，得更改默认日志的路径
     config.logger = {
         dir: `${appInfo.root}/logs`
     };

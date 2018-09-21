@@ -69,8 +69,6 @@ TESTS=test/x.test.js npm run test-local
 
 ### 部署到 dev
 
-使用微云 docker 部署，相关操作已在流水线中集成。
-dev 环境地址：https://hirobot.dev.weiyun.baidu.com:8425/demo
 
 ### 上线
 
@@ -126,16 +124,8 @@ xxxxx
 3. 使用 `npm run commit` 命令提交，或者全局安装 [commitizen](https://github.com/commitizen/cz-cli)。而不是直接使用 `git commit -m "xxx"`
     - 会被 `changelog` 记录的 type 有: `feat(新功能)`, `fix(修复 bug)`, `perf(性能优化)`, `revert(代码回滚)`
 
-4. 提交代码的时候在 `commit message` 中带上 `iCafe` 卡片信息。(ps. changelog 已配置与代码库关联，可直接输入卡片 id)
+4. 提交代码的时候在 `commit message` 中带上 `issue` 卡片信息。
 
-    ```
-    ? LIST any ISSUES CLOSED by this change (optional). E.g.: #31, #34
-    #16, #17
-    or
-    node-best-practices-16, node-best-practices-17
-    ```
-
-    ⚠️ 如果直接使用 `#16, #17` 的写法, iCode 上暂时还没法关联, 所以建议写全称呼 (todo: commit msg 还原)
 
 5. 上线的时候对版本进行更新。使用 `npm version patch` or `npm version xxx`，而不只是直接提交完代码就去发单。更新版本会自动执行以下内容:
     - fecs check --level 2
