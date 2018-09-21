@@ -1,54 +1,53 @@
 'use strict';
 
-// icode 提交如果带有 emoji 就会报错，所以 value 为普通字符
 module.exports = {
     types: [
         {
-            value: 'WIP',
+            value: '💪  WIP',
             name: '💪  WIP:      Work in progress'
         },
         {
-            value: 'feat',
+            value: '✨  feat',
             name: '✨  feat:     A new feature'
         },
         {
-            value: 'fix',
+            value: '🐞  fix',
             name: '🐞  fix:      A bug fix'
         },
         {
-            value: 'refactor',
+            value: '🛠   refactor',
             name:
                 '🛠   refactor: A code change that neither fixes a bug nor adds a feature'
         },
         {
-            value: 'docs',
+            value: '📚  docs',
             name: '📚  docs:     Documentation only changes'
         },
         {
-            value: 'test',
+            value: '🏁  test',
             name: '🏁  test:     Add missing tests or correcting existing tests'
         },
         {
-            value: 'ci',
+            value: '🚥  ci',
             name:
                 '🚥  ci:      Changes to our CI configuration files and scripts'
         },
         {
-            value: 'chore',
+            value: '🗯  chore',
             name:
                 '🗯  chore:    Changes that don\'t modify src or test files. Such as updating package manager'
         },
         {
-            value: 'perf',
+            value: '🚀  perf',
             name: '🚀  perf:      A code change that improves performance'
         },
         {
-            value: 'style',
+            value: '💅  style',
             name:
                 '💅  style:    Code Style, Changes that do not affect the meaning of the code'
         },
         {
-            value: 'revert',
+            value: '⏪  revert',
             name: '⏪  revert:   Revert to a commit'
         }
     ],
